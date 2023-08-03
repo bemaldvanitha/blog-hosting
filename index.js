@@ -30,6 +30,10 @@ db.sync()
 const postsRoutes = require('./routes/posts');
 app.use('/api/posts', postsRoutes);
 
+app.get('/test', (req, res) => {
+    res.json({ msg: 'running' })
+})
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
